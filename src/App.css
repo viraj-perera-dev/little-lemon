@@ -1,38 +1,137 @@
-.App {
+/* =========================
+   Base styles
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333333;
+  background-color: #edefee;
+}
+
+/* =========================
+   Headings
+========================= */
+h1 {
+  font-size: 2.5rem;
+  color: #495e57;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #495e57;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h4,
+h5,
+h6 {
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Text elements
+========================= */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+span {
+  color: #495e57;
+  font-weight: bold;
+}
+
+/* =========================
+   Navigation
+========================= */
+nav {
+  background-color: #495e57;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+nav li {
+  font-size: 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Images
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Page layout using CSS Grid */
+.app-layout {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  padding: 1rem;
+  background-color: #f4ce14;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Main content */
+main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Footer */
+footer {
+  background-color: #edefee;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  main {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 }
